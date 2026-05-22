@@ -15,3 +15,7 @@ out/
 
 # Logs
 *.log
+
+# Antigravity
+.antigravitycli/
+antigravity_context.md
