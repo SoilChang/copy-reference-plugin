@@ -1,5 +1,5 @@
 <idea-plugin>
-    <id>com.example.copycodereference</id>
+    <id>com.ccsoftware.copycodereference</id>
     <name>Copy Code Reference with Line Numbers</name>
     <vendor>Charles Chang</vendor>
 
@@ -15,7 +15,7 @@
         </ol>
 
         <h4>Example Reference:</h4>
-        <p><code>src/main/java/com/example/copycodereference/CopyCodeReferenceAction.java:18~57</code></p>
+        <p><code>src/main/java/com/ccsoftware/copycodereference/CopyCodeReferenceAction.java:18~57</code></p>
 
         <p><img src="https://raw.githubusercontent.com/SoilChang/copy-reference-plugin/main/screenshot.png" alt="Usage Screenshot" width="600" /></p>
     ]]></description>
@@ -30,7 +30,7 @@
 
     <actions>
         <action id="CopyCodeReferenceAction"
-                class="com.example.copycodereference.CopyCodeReferenceAction"
+                class="com.ccsoftware.copycodereference.CopyCodeReferenceAction"
                 text="Copy Code Reference (Line Numbers)"
                 description="Copies a relative file path reference with selected line numbers">
             <add-to-group group-id="EditorPopupMenu" anchor="after" relative-to-action="CopyReference"/>

@@ -1,4 +1,4 @@
-package com.example.copycodereference;
+package com.ccsoftware.copycodereference;
 
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;

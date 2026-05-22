@@ -8,6 +8,6 @@ A lightweight, productivity-boosting plugin that lets you copy file paths combin
 3. The reference link is copied to your clipboard.
 
 ### Example Reference:
-`src/main/java/com/example/copycodereference/CopyCodeReferenceAction.java:18~57`
+`src/main/java/com/ccsoftware/copycodereference/CopyCodeReferenceAction.java:18~57`
 
 ![Usage Screenshot](https://raw.githubusercontent.com/SoilChang/copy-reference-plugin/main/screenshot.png)
