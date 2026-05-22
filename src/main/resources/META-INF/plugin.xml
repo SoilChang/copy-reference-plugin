@@ -1,0 +1,40 @@
+<idea-plugin>
+    <id>com.example.copycodereference</id>
+    <name>Copy Code Reference with Line Numbers</name>
+    <vendor>Charles Chang</vendor>
+
+    <description><![CDATA[
+        <h3>Copy Code Reference with Line Numbers</h3>
+        <p>A lightweight, productivity-boosting plugin that lets you copy file paths combined with selected line numbers in the format <code>relative/path/to/file:startLine~endLine</code>.</p>
+        
+        <h4>How to Use:</h4>
+        <ol>
+            <li>Select any block of code inside the editor.</li>
+            <li>Right-click to open the context menu and select <b>Copy Code Reference (Line Numbers)</b>, or press <b>Shift + Alt + C</b>.</li>
+            <li>The reference link is copied to your clipboard.</li>
+        </ol>
+
+        <h4>Example Reference:</h4>
+        <p><code>src/main/java/com/example/copycodereference/CopyCodeReferenceAction.java:18~57</code></p>
+
+        <p><img src="https://raw.githubusercontent.com/charleschang/copy-reference-plugin/main/screenshot.png" alt="Usage Screenshot" width="600" /></p>
+    ]]></description>
+
+    <change-notes><![CDATA[
+        <ul>
+            <li>Initial Release: Copy code references in <code>file:line</code> or <code>file:startLine~endLine</code> format.</li>
+        </ul>
+    ]]></change-notes>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <actions>
+        <action id="CopyCodeReferenceAction"
+                class="com.example.copycodereference.CopyCodeReferenceAction"
+                text="Copy Code Reference (Line Numbers)"
+                description="Copies a relative file path reference with selected line numbers">
+            <add-to-group group-id="EditorPopupMenu" anchor="after" relative-to-action="CopyReference"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="shift alt C"/>
+        </action>
+    </actions>
+</idea-plugin>
