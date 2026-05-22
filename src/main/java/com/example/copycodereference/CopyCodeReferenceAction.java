@@ -34,6 +34,13 @@ public class CopyCodeReferenceAction extends AnAction {
         int startLine = document.getLineNumber(startOffset) + 1;
         int endLine = document.getLineNumber(endOffset) + 1;
 
+        if (endOffset > startOffset) {
+            int endLineIndex = document.getLineNumber(endOffset);
+            if (endOffset == document.getLineStartOffset(endLineIndex)) {
+                endLine = endLineIndex;
+            }
+        }
+
         String projectBasePath = project.getBasePath();
         String filePath = virtualFile.getPath();
         String relativePath = filePath;
