@@ -59,6 +59,11 @@ public class CopyCodeReferenceAction extends AnAction {
             reference = relativePath + ":" + startLine + "~" + endLine;
         }
 
+        String selectedText = selectionModel.getSelectedText();
+        if (selectedText != null && endLine - startLine + 1 <= 5) {
+            reference += "\n" + selectedText;
+        }
+
         StringSelection clipboardSelection = new StringSelection(reference);
         CopyPasteManager.getInstance().setContents(clipboardSelection);
     }

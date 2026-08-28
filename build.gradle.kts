@@ -21,10 +21,9 @@ dependencies {
 }
 
 tasks {
-    compileJava {
+    withType<JavaCompile>().configureEach {
         options.encoding = "UTF-8"
-        sourceCompatibility = "17"
-        targetCompatibility = "17"
+        options.release = 17
     }
 }
 
@@ -36,4 +35,3 @@ intellijPlatform {
         }
     }
 }
-
