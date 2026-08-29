@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.ccsoftware"
-version = "1.0-SNAPSHOT"
+version = "1.1.0"
 
 repositories {
     mavenCentral()
@@ -17,6 +17,7 @@ dependencies {
     intellijPlatform {
         intellijIdeaCommunity("2024.1")
         instrumentationTools()
+        pluginVerifier()
     }
 }
 
@@ -33,5 +34,15 @@ intellijPlatform {
             sinceBuild = "241"
             untilBuild = provider { null }
         }
+    }
+
+    pluginVerification {
+        ides {
+            ide("IC", "2024.1")
+        }
+    }
+
+    publishing {
+        token = providers.environmentVariable("PUBLISH_TOKEN")
     }
 }
